@@ -60,13 +60,12 @@ const fs = require("fs"),
 
                 for (let line of lines) {
                     const [arg1, arg2, arg3] = line.split(" -> ");
-                    
                     console.log(`Argument 1 : ${arg1}`);
-                    // console.log(`Argument 2 : ${arg2}`);
+                    console.log(`Argument 2 : ${arg2}`);
                     console.log(`Argument 3 : ${arg3}`);
 
-                    if(arg1 === config.nickname) return
-                    document.getElementById("Messages").value += `${arg1} -> ${arg3}\r\n`;
+                    if(!arg1 !== config.nickname) return
+                    document.getElementById("Messages").value += `${arg1} -> ${aes256.decrypt(config.password, arg3)}\r\n`;
     
                 }
                 // console.log(res.body)

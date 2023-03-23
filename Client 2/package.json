@@ -1,5 +1,5 @@
 {
-  "name": "cryptr",
+  "name": "cryptr2",
   "version": "1.2.0",
   "description": "A simple client to create a connection between two clients in a secure way",
   "main": "index.js",
